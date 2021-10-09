@@ -11,7 +11,7 @@ COPY . app.py /app/
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
 ## Step 4:
-Expose 8080
+Expose 80
 
 ## Step 5:
 CMD ["python", "app.py"]

@@ -26,15 +26,6 @@ lint:
 	hadolint --ignore DL3042 Dockerfile
 	# This is a linter for Python source code linter: https://www.pylint.org/
 	# This should be run from inside a virtualenv
-	pylint --disable=R,C,W1203 app.py
-
-validate-circleci:
-	# Validate .circle/config.yml
-	circleci config process .circleci/config.yml
-
-run-circleci-local:
-	circleci local execute
-
-
+	pylint --disable=R,C,W1203,W1309 app.py
 
 all: install lint test
